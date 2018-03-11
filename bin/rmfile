@@ -1,0 +1,14 @@
+if test -f $1
+then
+    echo "Do you really want to delete? Y/n"
+    read  confirm 
+    if test $confirm = '\n'
+        then rm $1
+        echo "Deleted!"
+    else
+        echo "Not deleted!"
+    fi
+    
+else
+    echo "There is not file here"
+fi
